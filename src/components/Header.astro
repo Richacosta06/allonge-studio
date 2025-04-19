@@ -1,16 +1,35 @@
 ---
 // Componente Header
 ---
-<header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 shadow-md shadow-gray-900">
+
+<header
+  class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 shadow-md shadow-gray-900"
+>
   <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#" class="text-2xl font-elegant font-bold text-white hover-effect">Allonge<span class="text-[#c0a062]">Estudio</span></a>
+    <a href="#" class="text-2xl font-elegant font-bold text-white hover-effect"
+      >Allonge<span class="text-[#c0a062]">Estudio</span></a
+    >
     <div class="hidden md:flex space-x-6 items-center">
-      <a href="#nosotros" class="text-gray-300 hover:text-white hover-effect">Nosotros</a>
-      <a href="#programas" class="text-gray-300 hover:text-white hover-effect">Programas</a>
-      <a href="#facultad" class="text-gray-300 hover:text-white hover-effect">Facultad</a>
-      <a href="#galeria" class="text-gray-300 hover:text-white hover-effect">Galería</a>
-      <a href="#contacto" class="text-gray-300 hover:text-white hover-effect">Contacto</a>
-      <a href="https://www.instagram.com/allongestudio/?hl=es-la" target="_blank" class="text-gray-300 hover:text-white hover-effect text-xl">
+      <a href="#nosotros" class="text-gray-300 hover:text-white hover-effect"
+        >Nosotros</a
+      >
+      <a href="#programas" class="text-gray-300 hover:text-white hover-effect"
+        >Programas</a
+      >
+      <a href="#facultad" class="text-gray-300 hover:text-white hover-effect"
+        >Facultad</a
+      >
+      <a href="#galeria" class="text-gray-300 hover:text-white hover-effect"
+        >Galería</a
+      >
+      <a href="#contacto" class="text-gray-300 hover:text-white hover-effect"
+        >Contacto</a
+      >
+      <a
+        href="https://www.instagram.com/allongestudio/?hl=es-la"
+        target="_blank"
+        class="text-gray-300 hover:text-white hover-effect text-xl"
+      >
         <i class="fab fa-instagram"></i>
       </a>
     </div>
@@ -20,14 +39,66 @@
       </button>
     </div>
   </nav>
-  <div id="mobile-menu" class="hidden md:hidden bg-black/90 absolute w-full">
-    <a href="#nosotros" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Nosotros</a>
-    <a href="#programas" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Programas</a>
-    <a href="#facultad" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Facultad</a>
-    <a href="#galeria" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Galería</a>
-    <a href="#contacto" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Contacto</a>
-    <a href="https://www.instagram.com/allongestudio/?hl=es-la" target="_blank" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-black/90 absolute w-full transition-transform duration-300 ease-in-out transform -translate-y-full"
+  >
+    <a
+      href="#nosotros"
+      class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white text-center"
+      >Nosotros</a
+    >
+    <a
+      href="#programas"
+      class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white text-center"
+      >Programas</a
+    >
+    <a
+      href="#facultad"
+      class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white text-center"
+      >Facultad</a
+    >
+    <a
+      href="#galeria"
+      class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white text-center"
+      >Galería</a
+    >
+    <a
+      href="#contacto"
+      class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white text-center"
+      >Contacto</a
+    >
+    <a
+      href="https://www.instagram.com/allongestudio/?hl=es-la"
+      target="_blank"
+      class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white text-center"
+    >
       <i class="fab fa-instagram mr-2"></i> Instagram
     </a>
   </div>
 </header>
+
+<script>
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener("click", () => {
+      // Toggle visibility classes
+      mobileMenu.classList.toggle("hidden");
+      // Toggle transform classes for animation
+      mobileMenu.classList.toggle("-translate-y-full"); // Start off-screen
+      mobileMenu.classList.toggle("translate-y-0"); // Move to visible position
+    });
+
+    // Close menu when a link is clicked
+    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.add("-translate-y-full");
+        mobileMenu.classList.remove("translate-y-0");
+      });
+    });
+  }
+</script>
