@@ -1,0 +1,33 @@
+---
+// Componente Header
+---
+<header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 shadow-md shadow-gray-900">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#" class="text-2xl font-elegant font-bold text-white hover-effect">Allonge<span class="text-[#c0a062]">Estudio</span></a>
+    <div class="hidden md:flex space-x-6 items-center">
+      <a href="#nosotros" class="text-gray-300 hover:text-white hover-effect">Nosotros</a>
+      <a href="#programas" class="text-gray-300 hover:text-white hover-effect">Programas</a>
+      <a href="#facultad" class="text-gray-300 hover:text-white hover-effect">Facultad</a>
+      <a href="#galeria" class="text-gray-300 hover:text-white hover-effect">Galería</a>
+      <a href="#contacto" class="text-gray-300 hover:text-white hover-effect">Contacto</a>
+      <a href="https://www.instagram.com/allongestudio/?hl=es-la" target="_blank" class="text-gray-300 hover:text-white hover-effect text-xl">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <div class="md:hidden">
+      <button id="mobile-menu-button" class="text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden bg-black/90 absolute w-full">
+    <a href="#nosotros" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Nosotros</a>
+    <a href="#programas" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Programas</a>
+    <a href="#facultad" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Facultad</a>
+    <a href="#galeria" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Galería</a>
+    <a href="#contacto" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">Contacto</a>
+    <a href="https://www.instagram.com/allongestudio/?hl=es-la" target="_blank" class="block px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white">
+      <i class="fab fa-instagram mr-2"></i> Instagram
+    </a>
+  </div>
+</header>
