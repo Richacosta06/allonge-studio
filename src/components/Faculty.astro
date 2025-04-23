@@ -1,5 +1,5 @@
 ---
-// Este componente representa la sección "Nuestra Facultad".
+import { Image } from "astro:assets";
 ---
 
 <section id="facultad" class="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -11,10 +11,12 @@
     </h2>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
       <div class="text-center">
-        <img
-          src="https://placehold.co/300x300/1a1a1a/c0a062?text=Foto+Director(a)"
-          alt="Foto del Director/a"
-          class="w-48 h-48 rounded-full mx-auto mb-4 object-cover border-4 border-[#c0a062] shadow-lg"
+        <Image
+          src="/1.jpg"
+          alt="Estudiantes de Allonge Estudio en clase"
+          width={300}
+          height={300}
+          class="w-48 h-48 rounded-full mx-auto mb-4 object-cover border-4 border-gray-700 shadow-lg"
         />
         <h3 class="text-xl font-semibold mb-1">Nombre Director/a</h3>
         <p class="text-[#c0a062] mb-2">Director/a Artístico/a</p>
@@ -24,9 +26,11 @@
         </p>
       </div>
       <div class="text-center">
-        <img
-          src="https://placehold.co/300x300/1a1a1a/ffffff?text=Foto+Maestro+1"
-          alt="Foto de Maestro/a"
+        <Image
+          src="/2.jpg"
+          alt="Estudiantes de Allonge Estudio en clase"
+          width={300}
+          height={300}
           class="w-48 h-48 rounded-full mx-auto mb-4 object-cover border-4 border-gray-700 shadow-lg"
         />
         <h3 class="text-xl font-semibold mb-1">Nombre Maestro/a</h3>
@@ -37,9 +41,11 @@
         </p>
       </div>
       <div class="text-center">
-        <img
-          src="https://placehold.co/300x300/1a1a1a/ffffff?text=Foto+Maestro+2"
-          alt="Foto de Maestro/a"
+        <Image
+          src="/3.jpg"
+          alt="Estudiantes de Allonge Estudio en clase"
+          width={300}
+          height={300}
           class="w-48 h-48 rounded-full mx-auto mb-4 object-cover border-4 border-gray-700 shadow-lg"
         />
         <h3 class="text-xl font-semibold mb-1">Nombre Maestro/a</h3>

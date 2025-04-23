@@ -1,17 +1,31 @@
 ---
-// Este componente representa la sección "Sobre Allonge Estudio".
+import { Image } from "astro:assets";
 ---
+
 <section id="nosotros" class="py-20 bg-gradient-to-b from-black to-gray-900">
   <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-elegant font-bold mb-6 text-[#c0a062]">Sobre Allonge Estudio</h2>
+    <h2 class="text-4xl font-elegant font-bold mb-6 text-[#c0a062]">
+      Sobre Allonge Estudio
+    </h2>
     <p class="text-lg text-gray-300 mb-10 max-w-3xl mx-auto">
-      En Allonge Estudio, nos dedicamos a cultivar el talento y la pasión por el ballet. Nuestra misión es ofrecer una formación integral de alta calidad en un ambiente inspirador y profesional, guiando a cada estudiante a alcanzar su máximo potencial artístico y personal.
+      En Allonge Estudio, nos dedicamos a cultivar el talento y la pasión por el
+      ballet. Nuestra misión es ofrecer una formación integral de alta calidad
+      en un ambiente inspirador y profesional, guiando a cada estudiante a
+      alcanzar su máximo potencial artístico y personal.
     </p>
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div class="text-left">
-        <h3 class="text-2xl font-elegant font-semibold mb-3 text-[#c0a062]">Nuestra Visión</h3>
-        <p class="text-gray-400 mb-6">Ser la academia de ballet líder, reconocida por su excelencia académica, su enfoque innovador y su compromiso con el desarrollo artístico de nuestros bailarines.</p>
-        <h3 class="text-2xl font-elegant font-semibold mb-3 text-[#c0a062]">Valores</h3>
+        <h3 class="text-2xl font-elegant font-semibold mb-3 text-[#c0a062]">
+          Nuestra Visión
+        </h3>
+        <p class="text-gray-400 mb-6">
+          Ser la academia de ballet líder, reconocida por su excelencia
+          académica, su enfoque innovador y su compromiso con el desarrollo
+          artístico de nuestros bailarines.
+        </p>
+        <h3 class="text-2xl font-elegant font-semibold mb-3 text-[#c0a062]">
+          Valores
+        </h3>
         <ul class="list-disc list-inside text-gray-400 space-y-2">
           <li>Disciplina y Dedicación</li>
           <li>Pasión por el Arte</li>
@@ -21,7 +35,13 @@
         </ul>
       </div>
       <div class="rounded-lg overflow-hidden shadow-xl">
-        <img src="https://placehold.co/600x400/1a1a1a/c0a062?text=Estudiantes+en+Clase" alt="Estudiantes de Allonge Estudio en clase" class="w-full h-auto object-cover">
+        <Image
+          src="/estudiantes-en-clase.jpeg"
+          alt="Estudiantes de Allonge Estudio en clase"
+          width={800}
+          height={600}
+          class="w-full h-auto object-cover"
+        />
       </div>
     </div>
     <div class="divider"></div>
